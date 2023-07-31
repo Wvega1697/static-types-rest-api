@@ -1,0 +1,35 @@
+# Ignorar archivos generados por Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn.lock
+
+# Ignorar archivos generados por TypeScript
+*.js
+*.js.map
+*.d.ts
+
+# Ignorar archivos de configuración local
+.env
+
+# Si estás utilizando Visual Studio Code como IDE, puedes agregar estas líneas para ignorar sus archivos y carpetas generados
+.vscode/
+*.code-workspace
+
+# Ignorar archivos de registro y cache
+*.log
+logs/
+*.log.*
+*.pid
+pids/
+*.seed
+*.pid.lock
+
+# Ignorar archivos de respaldo creados por editores de texto
+*~
+
+# Ignorar archivos de compilación de TypeScript (opcional, depende de cómo organices tu proyecto)
+/dist/
+
+# Ignorar archivos generados por herramientas de pruebas (opcional, depende de tus herramientas)
+/coverage/
