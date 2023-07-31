@@ -7,7 +7,6 @@ yarn.lock
 # Ignorar archivos generados por TypeScript
 *.js
 *.js.map
-*.d.ts
 
 # Ignorar archivos de configuración local
 .env
