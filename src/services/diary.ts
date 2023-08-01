@@ -5,9 +5,14 @@ const diaries: DiaryEntry[] = diaryData as DiaryEntry[]
 
 export const getEntries = (): DiaryEntry[] => diaries
 
-export const findById = (id: number): DiaryEntry | undefined => {
+export const findById = (id: number): NonSensitiveInfoDairyEntry | undefined => {
   const entry = diaries.find(d => d.id === id)
-  return entry
+  if (entry != null) {
+    const { comment, ...restOfDiary } = entry
+    return restOfDiary
+  }
+
+  return undefined
 }
 
 export const getEntriesWithoutSensitiveInfo = (): NonSensitiveInfoDairyEntry[] => {
