@@ -5,7 +5,8 @@ import diaryRouter from './routes/diaries'
 const app = express()
 app.use(express.json()) // middleware que transforma la req. body a un json
 
-const PORT = 3000
+// This line is important to ensure your app listens to the PORT env var
+const PORT = process.env.PORT ?? 8080
 
 app.get('/ping', (_req, res) => {
   console.log('someone ping here!! On date: ' + new Date().toLocaleDateString())
